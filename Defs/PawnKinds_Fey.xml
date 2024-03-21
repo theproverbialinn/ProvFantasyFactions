@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnKindDef Name="Prov_FeyPawnkind_Base" Abstract="true">
+    <race>Human</race>
+    <minGenerationAge>18</minGenerationAge>
+    <maxGenerationAge>80</maxGenerationAge>
+    <defaultFactionType>Prov_FeyFactionBase</defaultFactionType>
+    <chemicalAddictionChance>0</chemicalAddictionChance>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <biocodeWeaponChance>0</biocodeWeaponChance>
+    <humanPregnancyChance>0</humanPregnancyChance>
+    <invNutrition>3</invNutrition>
+    <invFoodDef>Pemmican</invFoodDef>
+    <itemQuality>Normal</itemQuality>
+    <gearHealthRange>1~1</gearHealthRange>
+    <techHediffsMoney>0~1</techHediffsMoney>
+    <techHediffsTags></techHediffsTags>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <backstoryCategories>
+      <li>Tribal</li>
+    </backstoryCategories>
+    <useFactionXenotypes>false</useFactionXenotypes>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+  </PawnKindDef>
+
+
+  <!-- Prov_Hag -->
+  <PawnKindDef ParentName="Prov_FeyPawnkind_Base">
+    <defName>Prov_Hag</defName>
+    <label>hag</label>
+    <combatPower>40</combatPower>
+    <defaultFactionType>Prov_FeyHagCoven</defaultFactionType>
+
+    <xenotypeSet>
+      <xenotypeChances>
+        <Prov_HagXenotype MayRequire="Ludeon.RimWorld.Biotech">100</Prov_HagXenotype>
+      </xenotypeChances>
+    </xenotypeSet> 
+    <apparelMoney>200~550</apparelMoney>
+
+    <apparelRequired>
+      <li>Outland_HeavyTribalwear</li>
+    </apparelRequired>
+
+    <initialWillRange>0~6</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+  </PawnKindDef>
+
+
+  <!-- Prov_Redcap -->
+  <PawnKindDef ParentName="Prov_FeyPawnkind_Base">
+    <defName>Prov_Redcap</defName>
+    <label>redcap</label>
+    <combatPower>40</combatPower>
+    <defaultFactionType>Prov_FeyHagCoven</defaultFactionType>
+
+    <xenotypeSet>
+      <xenotypeChances>
+        <Prov_RedcapXenotype MayRequire="Ludeon.RimWorld.Biotech">100</Prov_RedcapXenotype>
+      </xenotypeChances>
+    </xenotypeSet> 
+    <apparelMoney>1000~1500</apparelMoney>
+
+    <apparelTags Inherit="False">
+      <li>BS_Nisse</li>
+      <li>DevDesigner_WoodElves_Tunic</li>
+      <li>DankPyon_Peasant</li>
+      <li>DankPyon_Knight</li>
+    </apparelTags>
+	
+    <apparelRequired Inherit="False">
+      <li>BS_Nisse_Cap</li>
+      <li>DevDesigner_WoodElves_Tunic</li>
+      <li>DankPyon_Apparel_Trousers</li>
+      <li>DankPyon_Footwear_BootsPlate</li>
+    </apparelRequired>
+
+	<specificApparelRequirements Inherit="False">
+		<!-- FullHead -->
+		<li>
+			<bodyPartGroup>FullHead</bodyPartGroup>
+			<apparelLayer>Overhead</apparelLayer>
+			<requiredTag>BS_Nisse_Cap</requiredTag>
+			<stuff>DevilstrandCloth</stuff>
+			<color>(110, 10, 7)</color>
+		</li>
+		<li>
+			<bodyPartGroup>Torso</bodyPartGroup>
+			<apparelLayer>OnSkin</apparelLayer>
+			<requiredTag>DevDesigner_WoodElves_Tunic</requiredTag>
+			<stuff>Leather_Plain</stuff>
+		</li>
+		<!-- Legs -->
+		<li>
+			<bodyPartGroup>Legs</bodyPartGroup>
+			<apparelLayer>OnSkin</apparelLayer>
+			<requiredTag>DankPyon_Apparel_Trousers</requiredTag>
+			<stuff>Leather_Plain</stuff>
+		</li>
+		<!-- Feet -->
+		<li>
+			<bodyPartGroup>Feet</bodyPartGroup>
+			<apparelLayer>Middle</apparelLayer>
+			<requiredTag>DankPyon_Footwear_BootsPlate</requiredTag>
+			<stuff>Steel</stuff>
+		</li>
+    </specificApparelRequirements>
+	<shieldMoney>0~0</shieldMoney>
+    <weaponMoney>300~450</weaponMoney>
+	<weaponTags>
+		<li>Gladius</li>
+    </weaponTags>
+    <initialWillRange>0~6</initialWillRange>
+    <initialResistanceRange>10~17</initialResistanceRange>
+	
+  </PawnKindDef>
+  
+  
+</Defs>
